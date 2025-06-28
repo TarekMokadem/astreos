@@ -24,9 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ajouter les classes d'animation aux éléments
     function addAnimationClasses() {
         // Bannière
-        document.querySelector('.banner .title').classList.add('fade-in');
-        document.querySelector('.banner .content').classList.add('fade-in');
-        document.querySelector('.banner-button').classList.add('fade-in');
+        const bannerTitle = document.querySelector('.banner .title');
+        const bannerContent = document.querySelector('.banner .content');
+        const bannerButton = document.querySelector('.banner-button');
+        
+        if (bannerTitle) bannerTitle.classList.add('fade-in');
+        if (bannerContent) bannerContent.classList.add('fade-in');
+        if (bannerButton) bannerButton.classList.add('fade-in');
 
         // Sections de services
         document.querySelectorAll('.boxs1, .boxs2, .boxs3').forEach((box, index) => {
@@ -34,16 +38,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Section "Pourquoi Nous Choisir"
-        document.querySelector('.why-choose-us .title').classList.add('fade-in');
+        const whyChooseTitle = document.querySelector('.why-choose-us .title');
+        if (whyChooseTitle) whyChooseTitle.classList.add('fade-in');
         document.querySelectorAll('.reason').forEach((reason, index) => {
             reason.classList.add('scale-in');
         });
 
         // Section CTA
-        document.querySelector('.cta-intermediate').classList.add('fade-in');
+        const ctaSection = document.querySelector('.cta-intermediate');
+        if (ctaSection) ctaSection.classList.add('fade-in');
 
         // Section "Nos Engagements"
-        document.querySelector('.our-commitments .title').classList.add('fade-in');
+        const commitmentsTitle = document.querySelector('.our-commitments .title');
+        if (commitmentsTitle) commitmentsTitle.classList.add('fade-in');
         document.querySelectorAll('.commitment').forEach((commitment, index) => {
             commitment.classList.add('scale-in');
         });
@@ -62,24 +69,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // Écouter le défilement pour déclencher les animations
     window.addEventListener('scroll', handleScrollAnimations);
 
-    // Back to Top Button
-    const backToTopButton = document.createElement('button');
-    backToTopButton.className = 'back-to-top';
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    document.body.appendChild(backToTopButton);
-
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-    });
-
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    // Back to Top Button - Utiliser le bouton existant au lieu d'en créer un nouveau
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    if (backToTopButton) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
         });
-    });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }); 
