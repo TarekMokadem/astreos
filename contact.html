@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact - Astreos Sécurité</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="css/animations.css" rel="stylesheet" type="text/css"/>
+    <link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery-ui.js"></script> -->
+    <script type="text/javascript" src="js/animations.js"></script>
+</head>
+<body>
+<div class="header-home">
+    <div class="row">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo"/></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">Valeurs</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Travail</a></li>
+                <li><a href="contact.html" class="active">Contactez-nous</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<!-- Section Hero Contact -->
+<div class="contact-hero-section">
+    <div class="contact-hero-content">
+        <div class="contact-hero-text">
+            <h1 class="contact-hero-title">Contactez-nous</h1>
+            <h2 class="contact-hero-subtitle">Une question ? Un projet ? Nous sommes là pour vous</h2>
+            <p class="contact-hero-description">Notre équipe d'experts en sécurité privée est à votre disposition pour répondre à toutes vos questions et vous proposer des solutions adaptées à vos besoins.</p>
+        </div>
+        <div class="contact-hero-visual">
+            <div class="contact-hero-icon">
+                <i class="fas fa-headset"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+
+<div class="page">
+    <!-- Section Informations de Contact -->
+    <div class="contact-info-section">
+        <div class="contact-info-header">
+            <h2>Nos Coordonnées</h2>
+            <p>Plusieurs façons de nous contacter</p>
+        </div>
+        <div class="contact-info-grid">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                <h3>Notre Adresse</h3>
+                    <p>123 Rue de la Sécurité<br>59000 Lille, France</p>
+                    <a href="#" class="info-link">Voir sur la carte</a>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-content">
+                <h3>Téléphone</h3>
+                <p>(03) 20 00 00 00<br>24/7 - 7j/7</p>
+                    <a href="tel:0320000000" class="info-link">Appeler maintenant</a>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                <h3>Email</h3>
+                <p>contact@astreos-securite.com<br>Devis gratuit</p>
+                    <a href="mailto:contact@astreos-securite.com" class="info-link">Envoyer un email</a>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-content">
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi: 8h-18h<br>Samedi: 9h-12h</p>
+                    <span class="info-status">Disponible maintenant</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Formulaire et Carte -->
+    <div class="contact-main-section">
+        <div class="contact-main-container">
+            <!-- Formulaire de Contact -->
+            <div class="contact-form-container">
+                <div class="contact-form-header">
+                <h2>Envoyez-nous un message</h2>
+                <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                </div>
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-row">
+                    <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                    </div>
+                    <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone">
+                    </div>
+                    <div class="form-group">
+                            <label for="service">Service souhaité *</label>
+                            <select id="service" name="service" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="surveillance">Surveillance et Gardiennage</option>
+                            <option value="evenementiel">Sécurité Événementielle</option>
+                            <option value="protection">Protection Rapprochée</option>
+                                <option value="conseil">Conseil en Sécurité</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre demande..." rows="6" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Carte Google Maps -->
+            <div class="contact-map-container">
+                <div class="map-header">
+                    <h3>Notre Localisation</h3>
+                    <p>Venez nous rencontrer à notre agence de Lille</p>
+                </div>
+                <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2530.715434509674!2d3.05773531565485!3d50.63627974202106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d579b3256e11%3A0x40af13e81646360!2sLille%2C%20France!5e0!3m2!1sfr!2sfr!4v1675066340851!5m2!1sfr!2sfr"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                </div>
+                <div class="map-info">
+                    <div class="map-info-item">
+                        <i class="fas fa-car"></i>
+                        <span>Parking gratuit disponible</span>
+                    </div>
+                    <div class="map-info-item">
+                        <i class="fas fa-wheelchair"></i>
+                        <span>Accès handicapé</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section FAQ -->
+    <div class="faq-section">
+        <div class="faq-header">
+            <h2>Questions Fréquentes</h2>
+            <p>Les réponses à vos questions sur nos services de sécurité</p>
+        </div>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><i class="fas fa-question-circle"></i> Quels sont vos horaires d'intervention ?</h3>
+                </div>
+                <div class="faq-answer">
+                <p>Nos agents de sécurité sont disponibles 24h/24 et 7j/7 pour répondre à vos besoins en sécurité privée à Lille et Roubaix.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><i class="fas fa-question-circle"></i> Comment obtenir un devis ?</h3>
+                </div>
+                <div class="faq-answer">
+                <p>Contactez-nous via le formulaire ou par téléphone pour une étude gratuite de vos besoins en sécurité.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><i class="fas fa-question-circle"></i> Quelle est votre zone d'intervention ?</h3>
+                </div>
+                <div class="faq-answer">
+                <p>Nous intervenons principalement sur Lille et Roubaix, mais pouvons également couvrir toute la région Hauts-de-France.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3><i class="fas fa-question-circle"></i> Quelles sont vos certifications ?</h3>
+                </div>
+                <div class="faq-answer">
+                <p>Notre agence de sécurité privée est certifiée CNAPS et nos agents sont tous formés et habilités selon les normes en vigueur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-wrapper">
+    <div class="footer">
+        <div class="panel footer-panel">
+            <div class="title footer-title">
+                <h1 class="footer-heading">À PROPOS</h1>
+                <h2 class="footer-subheading">Notre engagement en sécurité privée</h2>
+                <div class="content footer-content">
+                    <P class="footer-text">Agence de sécurité privée spécialisée dans la protection des biens et des personnes à Lille et Roubaix.</P>
+                </div>
+            </div>
+        </div>
+        <div class="panel footer-panel">
+            <div class="title footer-title">
+                <h1 class="footer-heading">CONTACT</h1>
+                <h2 class="footer-subheading">Nous sommes à votre écoute</h2>
+                <div class="content footer-content">
+                    <P class="footer-text"><a href="mailto:contact@astreos-securite.com" class="footer-link">contact@astreos-securite.com</a></P>
+                    <h3 class="footer-phone">(03) 20 00 00 00</h3>
+                </div>
+            </div>
+        </div>
+        <div class="panel footer-panel border-right">
+            <div class="title footer-title">
+                <h1 class="footer-heading">MENTIONS LÉGALES</h1>
+                <h2 class="footer-subheading">Informations importantes</h2>
+                <div class="content footer-content">
+                    <p class="footer-text">© 2024 Astreos Sécurité. Tous droits réservés.</p>
+                    <p class="footer-text"><a href="mentions-legales.html" class="footer-link">Mentions légales</a></p>
+                    <P class="footer-text"><a href="politique-confidentialite.html" class="footer-link">Politique de confidentialité</a></P>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<!-- Bouton Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+// Burger menu : visible uniquement en mobile
+    const burgerMenu = document.querySelector('.burger-menu');
+    const menu = document.querySelector('.menu');
+    const body = document.body;
+
+function handleResize() {
+    if (window.innerWidth > 768) {
+        burgerMenu.style.display = 'none';
+        menu.classList.remove('active');
+        body.style.overflow = '';
+    } else {
+        burgerMenu.style.display = 'block';
+    }
+}
+window.addEventListener('resize', handleResize);
+document.addEventListener('DOMContentLoaded', handleResize);
+
+    burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('active');
+        menu.classList.toggle('active');
+        body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+    });
+
+// Fermer le menu lors du clic sur un lien (mobile)
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            burgerMenu.classList.remove('active');
+            menu.classList.remove('active');
+            body.style.overflow = '';
+        });
+    });
+
+// Fermer le menu lors du clic en dehors (mobile)
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu') && !e.target.closest('.burger-menu') && menu.classList.contains('active')) {
+            burgerMenu.classList.remove('active');
+            menu.classList.remove('active');
+            body.style.overflow = '';
+        }
+    });
+
+// Animation d'apparition du menu desktop
+if(window.innerWidth > 768) {
+    document.querySelectorAll('.menu ul li').forEach((li, i) => {
+        li.style.opacity = '0';
+        setTimeout(() => {
+            li.style.opacity = '1';
+        }, 200 + i * 100);
+    });
+}
+
+// Back to top
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 300) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+});
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+<!-- Overlay minimaliste pour le menu mobile -->
+<div class="mobile-menu-overlay"></div>
+
+<!-- Nouveau menu mobile inspiré d'astreos.net -->
+<button class="mobile-burger" aria-label="Ouvrir le menu">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect y="7" width="32" height="4" rx="2" fill="#1D88DE"/>
+    <rect y="14" width="32" height="4" rx="2" fill="#1D88DE"/>
+    <rect y="21" width="32" height="4" rx="2" fill="#1D88DE"/>
+  </svg>
+</button>
+<nav class="mobile-slide-menu">
+  <button class="mobile-close" aria-label="Fermer le menu">&times;</button>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="about.html">Valeurs</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="work.html">Travail</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const burger = document.querySelector('.mobile-burger');
+  const menu = document.querySelector('.mobile-slide-menu');
+  const close = document.querySelector('.mobile-close');
+  const overlay = document.querySelector('.mobile-menu-overlay');
+
+  // Ouvre le menu
+  burger.onclick = function() {
+    menu.classList.remove('closing');
+    menu.style.display = 'flex'; // Correction ici
+    menu.classList.add('open');
+    burger.style.display = 'none';
+    close.style.display = 'block';
+    overlay.classList.add('active');
+  };
+  // Ferme le menu avec animation
+  function closeMenuWithAnimation() {
+    menu.classList.remove('open');
+    menu.classList.add('closing');
+    overlay.classList.remove('active');
+    // Après l'animation, cacher le menu
+    setTimeout(function() {
+      menu.classList.remove('closing');
+      menu.style.display = 'none';
+      burger.style.display = 'block';
+      close.style.display = 'none';
+    }, 300);
+  }
+  close.onclick = closeMenuWithAnimation;
+  // Ferme le menu si on clique sur un lien
+  menu.querySelectorAll('a').forEach(link => {
+    link.onclick = closeMenuWithAnimation;
+  });
+  // Ferme le menu si on clique sur l'overlay
+  overlay.onclick = closeMenuWithAnimation;
+  // Initial state : burger visible, close caché, overlay caché
+  burger.style.display = 'block';
+  close.style.display = 'none';
+  overlay.classList.remove('active');
+});
+</script>
+</body>
+</html>

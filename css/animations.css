@@ -1,0 +1,82 @@
+/* Animations pour les éléments de la page */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation pour les cartes de services */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Animation pour les boutons */
+.banner-button, .cta-button {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.banner-button:hover, .cta-button:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+}
+
+/* Animation pour le menu */
+.menu ul li a {
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #0056b3;
+}
+
+/* Animation pour les images */
+.panel-img img {
+    transition: transform 0.3s ease;
+}
+
+.panel-img img:hover {
+    transform: scale(1.05);
+} 
