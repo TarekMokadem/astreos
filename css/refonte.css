@@ -1,0 +1,748 @@
+/* ============================================
+   REFONTE ASTREOS - Styles basés sur maquettes
+   Palette: #0F2332, #1A2B3C, blanc, gris clair
+   ============================================ */
+
+:root {
+    --refonte-bg-dark: #0F2332;
+    --refonte-bg-content: #1A2B3C;
+    --refonte-bg-nav: #2a3a4a;
+    --refonte-text-white: #ffffff;
+    --refonte-text-light: #b8c4d4;
+    --refonte-text-muted: #8a9aad;
+    --refonte-accent: #CCCCCC;
+    --refonte-max-width: 1200px;
+    --refonte-header-bar-height: 130px;
+    /* Position du logo dans la diagonale (% du triangle) */
+    --refonte-logo-left: 33.33%;
+    --refonte-logo-top: 33.33%;
+}
+
+/* Reset & Base */
+.refonte-body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--refonte-bg-dark);
+    color: var(--refonte-text-white);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ===== BARRE + DIAGONALE + LOGO ===== */
+.refonte-header-combined {
+    position: relative;
+    height: var(--refonte-header-bar-height);
+}
+
+/* Barre pleine largeur au fond - hauteur ajustable via --refonte-header-bar-height */
+.refonte-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: #A8ADB5;
+    z-index: 1;
+}
+
+/* Diagonale qui passe par-dessus la barre - logo à l'intérieur */
+.refonte-header-diagonal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 300%;
+    background: linear-gradient(135deg, #E5E7E9 0%, #D1D5DA 50%, #C5C9CE 100%);
+    clip-path: polygon(0 0, 100% 0, 0% 100%, 0 100%);
+    z-index: 2;
+}
+
+/* Logo positionné au centre du triangle (ajustable via variables) */
+.refonte-header-diagonal .refonte-logo {
+    position: absolute;
+    left: var(--refonte-logo-left);
+    top: var(--refonte-logo-top);
+    transform: translate(-70%, -50%);
+}
+
+/* Hauteur fixe = hauteur de la barre (indépendante du logo) */
+.refonte-header-inner {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--refonte-max-width);
+    height: var(--refonte-header-bar-height);
+    padding: 0 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 3;
+    box-sizing: border-box;
+}
+
+/* ===== HEADER avec image ===== */
+.refonte-header {
+    position: relative;
+    min-height: 120px;
+    overflow: hidden;
+}
+
+.refonte-header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/banniere.jpeg) no-repeat center top;
+    background-size: cover;
+    filter: grayscale(100%) contrast(1.05);
+}
+
+.refonte-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(105deg, transparent 0%, transparent 35%, rgba(15, 35, 50, 0.85) 55%, rgba(15, 35, 50, 0.7) 100%);
+    z-index: 1;
+}
+
+.refonte-header-inner .refonte-nav {
+    background: transparent;
+}
+
+.refonte-header-inner .refonte-mobile-burger {
+    color: #2a2a2a;
+}
+
+/* Logo - fond léger avec ombre subtile */
+.refonte-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--refonte-text-white);
+    padding: 14px 18px;
+    border-radius: 6px;
+}
+
+.refonte-logo img {
+    height: 150px;
+    width: auto;
+    display: block;
+}
+
+/* Navigation */
+.refonte-nav {
+    padding: 0;
+}
+
+.refonte-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2px;
+}
+
+.refonte-nav a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.refonte-nav a:hover {
+    color: #1a1a1a;
+    background: #8a9099;
+}
+
+.refonte-nav a.active {
+    color: #1a1a1a;
+    background: #d4d8de;
+}
+
+/* ===== HERO SECTION ===== */
+.refonte-hero {
+    background: #1A2834;
+    padding: 50px 40px 70px;
+    position: relative;
+}
+
+.refonte-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--refonte-text-muted), transparent);
+    opacity: 0.5;
+}
+
+.refonte-hero-inner {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.refonte-hero-inner .refonte-hero-divider {
+    margin-top: 45px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.refonte-hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.6em;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 40px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.refonte-hero-description p {
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 1.75;
+    margin-bottom: 22px;
+}
+
+.refonte-hero-description p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Divider entre hero et services */
+.refonte-hero-divider {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* ===== SERVICES SECTION ===== */
+.refonte-services {
+    background: #131E2A;
+    padding: 50px 40px 80px;
+}
+
+.refonte-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: var(--refonte-max-width);
+    margin: 0 auto;
+}
+
+.refonte-service-card {
+    display: block;
+    text-decoration: none;
+    color: var(--refonte-text-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.refonte-service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.refonte-service-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.refonte-service-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 10%;
+    filter: saturate(0.85) sepia(0.1);
+}
+
+.refonte-service-card:hover .refonte-service-card-img {
+    filter: saturate(1) sepia(0);
+}
+
+/* Overlay semi-transparent en bas de l'image avec le nom du service */
+.refonte-service-card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 20px;
+    background: rgba(0, 0, 0, 0.65);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15em;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ===== POURQUOI NOUS CHOISIR ===== */
+.refonte-why {
+    background: var(--refonte-bg-dark);
+    padding: 60px 30px 80px;
+}
+
+.refonte-why-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.refonte-why-title h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--refonte-text-white);
+    margin: 0 0 12px;
+}
+
+.refonte-why-title p {
+    font-size: 16px;
+    color: var(--refonte-text-light);
+    margin: 0;
+}
+
+.refonte-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: var(--refonte-max-width);
+    margin: 0 auto;
+}
+
+.refonte-why-item {
+    text-align: center;
+}
+
+.refonte-why-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refonte-why-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--refonte-text-muted);
+}
+
+.refonte-why-item h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    margin: 0 0 12px;
+}
+
+.refonte-why-item p {
+    font-size: 14px;
+    color: var(--refonte-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ===== BANNER DEVIS ===== */
+.refonte-devis-banner {
+    padding: 40px 30px 50px;
+    background: var(--refonte-bg-dark);
+}
+
+.refonte-devis-banner-inner {
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 16px;
+    max-width: var(--refonte-max-width);
+    margin: 0 auto;
+}
+
+.refonte-devis-banner-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/surveillance_1.jpeg) no-repeat center 25%;
+    background-size: cover;
+    filter: grayscale(40%) brightness(0.6);
+}
+
+.refonte-devis-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 35, 50, 0.45);
+    z-index: 1;
+}
+
+.refonte-devis-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 60px 40px 200px 40px;
+}
+
+.refonte-devis-intro {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.05em;
+    color: var(--refonte-text-white);
+    margin: 0 0 20px;
+    font-weight: 400;
+}
+
+.refonte-devis-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.9em;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    margin: 0 0 36px;
+    line-height: 1.35;
+}
+
+.refonte-devis-btn {
+    display: inline-block;
+    padding: 16px 44px;
+    background: #A8ADB5;
+    color: #1a1a1a;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.refonte-devis-btn:hover {
+    background: #d4d8de;
+    transform: translateY(-2px);
+}
+
+/* ===== NOS ENGAGEMENTS ===== */
+.refonte-engagements {
+    background: var(--refonte-bg-dark);
+    padding: 70px 30px 90px;
+}
+
+.refonte-engagements-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.refonte-engagements-title h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--refonte-text-white);
+    margin: 0 0 12px;
+}
+
+.refonte-engagements-title p {
+    font-size: 16px;
+    color: var(--refonte-text-light);
+    margin: 0;
+}
+
+.refonte-engagements-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: var(--refonte-max-width);
+    margin: 0 auto;
+}
+
+.refonte-engagements-item {
+    text-align: center;
+}
+
+.refonte-engagements-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.refonte-engagements-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--refonte-text-white);
+    opacity: 0.9;
+}
+
+.refonte-engagements-item h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    margin: 0 0 16px;
+}
+
+.refonte-engagements-item p {
+    font-size: 15px;
+    color: var(--refonte-text-light);
+    line-height: 1.7;
+    margin: 0;
+    text-align: center;
+}
+
+/* ===== CONTACT INTRO ===== */
+.refonte-contact-intro {
+    background: var(--refonte-bg-content);
+    padding: 70px 30px 90px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.refonte-contact-intro h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--refonte-text-white);
+    margin: 0 0 28px;
+}
+
+.refonte-contact-tagline {
+    font-size: 15px;
+    color: var(--refonte-text-light);
+    margin: 0 0 8px;
+}
+
+.refonte-contact-info {
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+.refonte-contact-info p {
+    font-size: 15px;
+    color: var(--refonte-text-light);
+    margin: 0 0 12px;
+}
+
+.refonte-contact-info a {
+    color: var(--refonte-text-white);
+    text-decoration: none;
+}
+
+.refonte-contact-info a:hover {
+    text-decoration: underline;
+}
+
+.refonte-contact-label {
+    display: inline-block;
+    margin-right: 8px;
+    color: var(--refonte-text-muted);
+}
+
+/* ===== FOOTER ===== */
+.refonte-footer {
+    background: var(--refonte-bg-content);
+    padding: 40px 30px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.refonte-footer-inner {
+    max-width: var(--refonte-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.refonte-footer h4 {
+    font-size: 14px;
+    color: var(--refonte-text-muted);
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.refonte-footer p,
+.refonte-footer a {
+    font-size: 14px;
+    color: var(--refonte-text-light);
+    margin: 0 0 8px;
+}
+
+.refonte-footer a {
+    color: var(--refonte-text-light);
+    text-decoration: none;
+}
+
+.refonte-footer a:hover {
+    color: var(--refonte-text-white);
+}
+
+/* ===== MOBILE MENU ===== */
+.refonte-mobile-burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.refonte-mobile-burger svg rect {
+    fill: var(--refonte-text-white);
+}
+
+.refonte-mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100%;
+    background: var(--refonte-bg-content);
+    z-index: 1000;
+    padding: 80px 30px 30px;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.refonte-mobile-menu.open {
+    display: block;
+}
+
+.refonte-mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.refonte-mobile-menu a {
+    display: block;
+    color: var(--refonte-text-white);
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 18px;
+}
+
+.refonte-mobile-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--refonte-text-white);
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .refonte-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .refonte-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .refonte-engagements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .refonte-nav {
+        display: none;
+    }
+    
+    .refonte-mobile-burger {
+        display: block;
+    }
+    
+    .refonte-services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .refonte-why-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .refonte-hero h1 {
+        font-size: 2em;
+    }
+    
+    .refonte-header-bg {
+        width: 100%;
+    }
+    
+    .refonte-header-inner {
+        padding: 18px 24px;
+    }
+    
+    .refonte-logo {
+        padding: 10px 12px;
+    }
+    
+    .refonte-logo img {
+        height: 56px;
+    }
+}
+
+@media (max-width: 480px) {
+    .refonte-header {
+        min-height: 100px;
+    }
+    
+    .refonte-hero,
+    .refonte-services,
+    .refonte-why {
+        padding: 40px 20px 60px;
+    }
+    
+    .refonte-hero h1 {
+        font-size: 1.7em;
+    }
+    
+    .refonte-devis-banner {
+        padding: 24px 16px 36px;
+    }
+    
+    .refonte-devis-banner-inner {
+        min-height: 320px;
+    }
+    
+    .refonte-devis-title {
+        font-size: 1.5em;
+    }
+    
+    .refonte-devis-banner-content {
+        padding: 40px 24px;
+    }
+    
+    .refonte-engagements,
+    .refonte-contact-intro {
+        padding: 50px 20px 70px;
+    }
+    
+    .refonte-engagements-title h2,
+    .refonte-contact-intro h2 {
+        font-size: 1.8em;
+    }
+}

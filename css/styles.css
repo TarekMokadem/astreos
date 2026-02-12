@@ -633,8 +633,16 @@ BOX CLASSES
 
 .panel-img {
     margin: 0 auto;
-    padding: 20px 0px 40px 0px;
-    width: 260px;
+    padding: 0;
+    width: 100%;
+}
+
+.panel-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center 10%;
+    border-radius: 8px;
 }
 
 .content p {
@@ -3536,21 +3544,24 @@ BOXES DE SERVICES MODERNES - STYLES EXCLUSIFS
 /* Image des services */
 .modern-service-img {
     margin: 0;
-    padding: 30px 20px 20px;
+    padding: 0;
     width: 100%;
     position: relative;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    overflow: hidden;
 }
 
 .modern-service-img img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center 10%;
     transition: transform 0.3s ease;
+    border-radius: 8px;
 }
 
 .modern-service-box:hover .modern-service-img img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 /* Contenu des services */
@@ -3668,12 +3679,12 @@ BOXES DE SERVICES MODERNES - STYLES EXCLUSIFS
     }
     
     .modern-service-img {
-        padding: 20px 10px 10px;
+        padding: 0;
     }
     
     .modern-service-img img {
-        width: 60px;
-        height: 60px;
+        width: 100%;
+        height: 200px;
     }
     
     .modern-service-content {
