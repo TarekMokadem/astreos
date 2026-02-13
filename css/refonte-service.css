@@ -17,11 +17,11 @@
     height: 100%;
     background: url(../images/banniere.jpeg) no-repeat center;
     background-size: cover;
-    filter: grayscale(80%) brightness(0.5);
+    filter: grayscale(80%) contrast(1.05);
 }
 
 .refonte-service-surveillance .refonte-service-hero-bg {
-    background-image: url(../images/surveillance-gardiennage.jpg);
+    background-image: url(../images/banniere.jpeg);
 }
 
 .refonte-service-distribution .refonte-service-hero-bg {
@@ -29,7 +29,7 @@
 }
 
 .refonte-service-evenementiel .refonte-service-hero-bg {
-    background-image: url(../images/securite-evenementielle.jpg);
+    background-image: url(../images/banniere.jpeg);
 }
 
 .refonte-service-incendie .refonte-service-hero-bg {
@@ -83,7 +83,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 100px;
     align-items: start;
 }
 
@@ -99,7 +99,7 @@
 
 .refonte-service-text h3 {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: 600;
     color: var(--refonte-text-white);
     margin: 25px 0 12px;
@@ -112,7 +112,7 @@
 }
 
 .refonte-service-text p {
-    font-size: 15px;
+    font-size: 17px;
     color: var(--refonte-text-light);
     line-height: 1.7;
     margin: 0 0 16px;
@@ -133,6 +133,32 @@
     object-position: center;
 }
 
+/* Pages services - images carrées, position top, effet décalé */
+.refonte-service-surveillance .refonte-service-images,
+.refonte-service-distribution .refonte-service-images,
+.refonte-service-evenementiel .refonte-service-images,
+.refonte-service-incendie .refonte-service-images {
+    align-items: flex-start;
+}
+
+.refonte-service-surveillance .refonte-service-img,
+.refonte-service-distribution .refonte-service-img,
+.refonte-service-evenementiel .refonte-service-img,
+.refonte-service-incendie .refonte-service-img {
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-position: top;
+}
+
+.refonte-service-surveillance .refonte-service-img:nth-child(2),
+.refonte-service-distribution .refonte-service-img:nth-child(2),
+.refonte-service-evenementiel .refonte-service-img:nth-child(2),
+.refonte-service-incendie .refonte-service-img:nth-child(2) {
+    align-self: flex-end;
+}
+
 @media (max-width: 900px) {
     .refonte-service-content {
         grid-template-columns: 1fr;
@@ -144,6 +170,14 @@
     
     .refonte-service-img {
         height: 220px;
+    }
+    
+    .refonte-service-surveillance .refonte-service-img,
+    .refonte-service-distribution .refonte-service-img,
+    .refonte-service-evenementiel .refonte-service-img,
+    .refonte-service-incendie .refonte-service-img {
+        height: auto;
+        width: 240px;
     }
     
     .refonte-service-hero {
@@ -162,6 +196,13 @@
     
     .refonte-service-img {
         height: 200px;
+    }
+    
+    .refonte-service-surveillance .refonte-service-img,
+    .refonte-service-distribution .refonte-service-img,
+    .refonte-service-evenementiel .refonte-service-img,
+    .refonte-service-incendie .refonte-service-img {
+        width: 200px;
     }
     
     .refonte-service-hero {
