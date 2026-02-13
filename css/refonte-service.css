@@ -2,6 +2,102 @@
    REFONTE - Pages de services (2 colonnes)
    ============================================ */
 
+/* ===== PAGE SERVICES (vue d'ensemble) ===== */
+.refonte-services-overview-main {
+    background: var(--refonte-bg-content);
+    padding: 60px 30px 80px;
+    min-height: calc(100vh - 300px);
+}
+
+.refonte-services-overview-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+.refonte-services-overview-link {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.refonte-services-overview-link:hover {
+    transform: translateY(-3px);
+}
+
+.refonte-services-overview-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.refonte-services-overview-link:hover .refonte-services-overview-card {
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+.refonte-services-overview-img {
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.refonte-services-overview-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 20px;
+    background: rgba(0, 0, 0, 0.65);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    text-align: center;
+}
+
+.refonte-services-overview-link:nth-child(2),
+.refonte-services-overview-link:nth-child(4) {
+    align-self: flex-end;
+}
+
+@media (max-width: 900px) {
+    .refonte-services-overview-main {
+        padding: 50px 24px 70px;
+    }
+    
+    .refonte-services-overview-grid {
+        max-width: 300px;
+        gap: 28px;
+    }
+    
+    .refonte-services-overview-img {
+        width: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .refonte-services-overview-main {
+        padding: 40px 20px 60px;
+    }
+    
+    .refonte-services-overview-grid {
+        max-width: 240px;
+        gap: 24px;
+    }
+    
+    .refonte-services-overview-img {
+        width: 220px;
+    }
+}
+
 .refonte-service-hero {
     position: relative;
     min-height: 180px;
