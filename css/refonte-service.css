@@ -4,21 +4,36 @@
 
 .refonte-service-hero {
     position: relative;
-    min-height: 100px;
-    background: linear-gradient(135deg, rgba(42, 58, 74, 0.95) 0%, rgba(26, 43, 60, 0.9) 100%);
+    min-height: 180px;
+    background: var(--refonte-bg-content);
     overflow: hidden;
 }
 
 .refonte-service-hero-bg {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 60%;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background: url(../images/banniere.jpeg) no-repeat right top;
+    background: url(../images/banniere.jpeg) no-repeat center;
     background-size: cover;
-    filter: grayscale(100%);
-    opacity: 0.4;
+    filter: grayscale(80%) brightness(0.5);
+}
+
+.refonte-service-surveillance .refonte-service-hero-bg {
+    background-image: url(../images/surveillance-gardiennage.jpg);
+}
+
+.refonte-service-distribution .refonte-service-hero-bg {
+    background-image: url(../images/banniere.jpeg);
+}
+
+.refonte-service-evenementiel .refonte-service-hero-bg {
+    background-image: url(../images/securite-evenementielle.jpg);
+}
+
+.refonte-service-incendie .refonte-service-hero-bg {
+    background-image: url(../images/banniere.jpeg);
 }
 
 .refonte-service-hero-overlay {
@@ -41,15 +56,20 @@
     align-items: center;
 }
 
+.refonte-service-hero .refonte-header-overlay {
+    background: linear-gradient(105deg, rgba(15, 35, 50, 0.85) 0%, rgba(15, 35, 50, 0.6) 50%, transparent 100%);
+}
+
 .refonte-service-brand {
     position: absolute;
-    bottom: 20px;
-    left: 30px;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: 'Oswald', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--refonte-text-white);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /* Main content - 2 colonnes */
@@ -101,15 +121,16 @@
 .refonte-service-images {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
 }
 
 .refonte-service-img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    height: 260px;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
     object-fit: cover;
-    object-position: center 10%;
+    object-position: center;
 }
 
 @media (max-width: 900px) {
@@ -119,5 +140,36 @@
     
     .refonte-service-images {
         order: -1;
+    }
+    
+    .refonte-service-img {
+        height: 220px;
+    }
+    
+    .refonte-service-hero {
+        min-height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .refonte-service-main {
+        padding: 40px 20px 60px;
+    }
+    
+    .refonte-service-title {
+        font-size: 2em;
+    }
+    
+    .refonte-service-img {
+        height: 200px;
+    }
+    
+    .refonte-service-hero {
+        min-height: 120px;
+    }
+    
+    .refonte-service-brand {
+        font-size: 14px;
+        bottom: 16px;
     }
 }

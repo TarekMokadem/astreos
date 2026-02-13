@@ -668,6 +668,11 @@
 }
 
 @media (max-width: 900px) {
+    .refonte-header-diagonal {
+        width: 40%;
+        height: 200%;
+    }
+    
     .refonte-nav {
         display: none;
     }
