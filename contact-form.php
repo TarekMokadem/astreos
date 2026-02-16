@@ -22,10 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Traduire le service en français
     $services_fr = [
-        "surveillance" => "Surveillance et Gardiennage",
-        "evenementiel" => "Sécurité Événementielle",
-        "protection" => "Protection Rapprochée",
-        "conseil" => "Conseil en Sécurité",
+        "surveillance" => "Surveillance",
+        "distribution" => "Distribution",
+        "evenementiel" => "Événementiel",
+        "incendie" => "Sécurité Incendie",
         "autre" => "Autre"
     ];
     

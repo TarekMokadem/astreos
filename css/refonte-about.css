@@ -1,0 +1,214 @@
+/* ===== PAGE VALEURS ===== */
+.refonte-about-hero {
+    position: relative;
+    min-height: 180px;
+    background: var(--refonte-bg-content);
+    overflow: hidden;
+}
+
+.refonte-about-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/banniere.jpeg) no-repeat center;
+    background-size: cover;
+    filter: grayscale(80%) brightness(0.5);
+}
+
+.refonte-about-hero .refonte-header-overlay {
+    background: linear-gradient(105deg, rgba(11, 41, 64, 0.85) 0%, rgba(11, 41, 64, 0.6) 50%, transparent 100%);
+}
+
+.refonte-about-brand {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    letter-spacing: 2px;
+}
+
+.refonte-about-main {
+    background: var(--refonte-bg-dark);
+    padding: 60px 30px 80px;
+}
+
+.refonte-about-values {
+    max-width: 800px;
+    margin: 0 auto 70px;
+}
+
+.refonte-about-values h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--refonte-text-white);
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+.refonte-about-subtitle {
+    font-size: 1.1em;
+    color: var(--refonte-text-light);
+    text-align: center;
+    margin: 0 0 32px;
+}
+
+.refonte-about-intro {
+    font-size: 16px;
+    color: var(--refonte-text-light);
+    line-height: 1.75;
+    margin: 0 0 40px;
+}
+
+.refonte-about-value {
+    margin-bottom: 36px;
+}
+
+.refonte-about-value h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    margin: 0 0 16px;
+}
+
+.refonte-about-diamond {
+    color: #6ba3d4;
+    margin-right: 8px;
+}
+
+.refonte-about-value p {
+    font-size: 15px;
+    color: var(--refonte-text-light);
+    line-height: 1.75;
+    margin: 0 0 12px;
+}
+
+.refonte-about-slogan {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    text-align: center;
+    margin: 50px 0 0;
+}
+
+.refonte-about-mission {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.refonte-about-mission h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--refonte-text-white);
+    text-align: center;
+    margin: 0 0 28px;
+}
+
+.refonte-about-mission > p {
+    font-size: 15px;
+    color: var(--refonte-text-light);
+    line-height: 1.75;
+    margin: 0 0 16px;
+}
+
+.refonte-about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.refonte-about-stat {
+    text-align: center;
+}
+
+.refonte-about-stat-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--refonte-text-muted);
+    border: 2px solid var(--refonte-text-muted);
+    border-radius: 50%;
+}
+
+.refonte-about-stat h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--refonte-text-white);
+    margin: 0 0 8px;
+}
+
+.refonte-about-stat-value {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--refonte-text-white);
+    margin: 0 0 16px !important;
+}
+
+.refonte-about-stat p {
+    font-size: 14px;
+    color: var(--refonte-text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.refonte-about-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: var(--refonte-max-width);
+    margin: 0 auto 0;
+}
+
+.refonte-about-img {
+    width: 100%;
+    height: 105%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+    .refonte-about-stats,
+    .refonte-about-images {
+        grid-template-columns: 1fr;
+    }
+    
+    .refonte-about-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .refonte-about-main {
+        padding: 40px 20px 60px;
+    }
+    
+    .refonte-about-values h1 {
+        font-size: 2em;
+    }
+    
+    .refonte-about-mission h2 {
+        font-size: 1.7em;
+    }
+}

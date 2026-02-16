@@ -9,6 +9,38 @@
     min-height: calc(100vh - 300px);
 }
 
+.refonte-services-overview-intro {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.refonte-services-overview-intro h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--refonte-text-white);
+    margin: 0 0 16px;
+}
+
+.refonte-services-overview-tagline {
+    font-size: 1.1em;
+    color: var(--refonte-text-light);
+    margin: 0 0 24px;
+}
+
+.refonte-services-overview-text {
+    font-size: 15px;
+    color: var(--refonte-text-light);
+    line-height: 1.75;
+    margin: 0 0 16px;
+    text-align: left;
+}
+
+.refonte-services-overview-text:last-of-type {
+    margin-bottom: 0;
+}
+
 .refonte-services-overview-grid {
     display: flex;
     flex-direction: column;
@@ -71,6 +103,14 @@
 @media (max-width: 900px) {
     .refonte-services-overview-main {
         padding: 50px 24px 70px;
+    }
+    
+    .refonte-services-overview-intro {
+        margin-bottom: 48px;
+    }
+    
+    .refonte-services-overview-intro h1 {
+        font-size: 2em;
     }
     
     .refonte-services-overview-grid {
