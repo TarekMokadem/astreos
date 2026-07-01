@@ -1,6 +1,6 @@
 <?php
 // Configuration
-$to_email = "contact@astreos.net";
+$to_email = "om.mokadem@gmail.com";
 $subject_prefix = "Contact depuis le site Astreos - ";
 
 // Vérifier que c'est une requête POST
